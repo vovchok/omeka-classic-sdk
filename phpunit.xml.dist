@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
+         backupGlobals="false"
+         colors="true"
+         bootstrap="vendor/autoload.php"
+>
+    <php>
+        <ini name="error_reporting" value="-1" />
+        <env name="OMEKA_API_ENDPOINT" value="http://omeka/api/"/>
+        <env name="OMEKA_API_KEY" value="6657c922c21ac18ee3501f787ad41a1f1d22920a"/>
+    </php>
+
+    <testsuites>
+        <testsuite name="Omeka Classic SDK Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
