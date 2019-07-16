@@ -60,6 +60,8 @@ class Transport implements TransportInterface
      */
     public function get(RepresentationInterface $representation)
     {
+        $this->setResourceName($representation->getEndpointName());
+
         $response = $this->request('GET', $this->buildUrl($representation['id']));
 
         return $response->toArray();
